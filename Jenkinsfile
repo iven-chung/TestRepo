@@ -17,4 +17,13 @@ pipeline{
 			}
 		}
 	}
+	post{
+		always{
+			//send email
+		}
+		success{
+		}
+		failures{
+		}
+	}
 }
