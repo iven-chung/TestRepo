@@ -18,12 +18,9 @@ pipeline{
 		}
 	}
 	post{
-		always{
-			
+		failure{
+			//Create Problem Ticket
 		}
-		success{
-		}
-		failures{
-		}
+		
 	}
 }
