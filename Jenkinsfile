@@ -17,10 +17,5 @@ pipeline{
 			}
 		}
 	}
-	post{
-		failure{
-			//Create Problem Ticket
-		}
-		
-	}
+	
 }
