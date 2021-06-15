@@ -6,8 +6,8 @@ pipeline{
 		NEW_VERSION = '1.3.0'
 	}
 	parameters{
-		choice(name: 'VERSION', choices: ['1.0.0', '1.1.0', '1.2.0'], description: 'choice description')
-		booleanParam(name: 'InvokeTests', defaultValue: true, description: '')
+		choice(name: 'VERSION', choices: ['1.0.0', '1.1.0', '1.2.0'], description: 'Please select version')
+		booleanParam(name: 'IncludeTests', defaultValue: true, description: '')
 	}
 	stages {
 		stage("Init"){
