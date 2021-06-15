@@ -1,3 +1,5 @@
+def groovy
+
 pipeline{
 	agent any
 	environment {
@@ -8,6 +10,13 @@ pipeline{
 		booleanParam(name: 'InvokeTests', defaultValue: true, description: '')
 	}
 	stages {
+		stage("Init"){
+			steps{
+				script{
+					groovy = load "script.groovy"
+				}
+			}
+		}
 		stage("Build"){
 			steps{
 				echo 'Building my application'
@@ -26,8 +35,9 @@ pipeline{
 		}
 		stage("Deploy"){
 			steps{
-				echo 'Deploying my application'
-				echo "Deploying version ${params.VERSION}"
+				script{
+					groovy.deployApp()
+				}
 			}
 		}
 	}
