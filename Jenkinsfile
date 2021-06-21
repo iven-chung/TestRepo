@@ -14,6 +14,7 @@ pipeline{
 			steps{
 				script{
 					groovy = load "script.groovy"
+					echo 'Create Docker Image'
 				}
 			}
 		}
